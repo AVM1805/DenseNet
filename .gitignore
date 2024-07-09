@@ -4,8 +4,9 @@ __pycache__
 log.txt
 model.pth
 report.png
-TransformedImages.py
+TransformedImagesDataset.py
 a7.pdf
 training_loop.py
 .DS_Store
 dataset.py
+Thumbs.db
