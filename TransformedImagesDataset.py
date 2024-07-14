@@ -18,8 +18,7 @@ def augment_image(
                             transforms.RandomRotation((10,180),interpolation=transforms.InterpolationMode.BILINEAR),
                             transforms.RandomPerspective(p=1),
                             transforms.RandomSolarize(threshold=0.5, p=1),
-                            transforms.RandomInvert(p=1)
-                            #transforms.ElasticTransform(100.0)
+                            transforms.RandomInvert(p=1),
                         ]
     v = index%(len(transforms_sequence)+3)
     trans_name = None

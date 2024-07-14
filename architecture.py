@@ -73,17 +73,11 @@ class MyCNN(Module):
         x = self.layers(input_images)
         return x
 
-model_parameters={}
-model_parameters['densenet121'] = [6,12,24,16]
-model_parameters['densenet169'] = [6,12,32,32]
-model_parameters['densenet201'] = [6,12,48,32] #!
-model_parameters['densenet264'] = [6,12,64,48]
-
 model = MyCNN(
-        nblocks=model_parameters['densenet201'], 
+        nblocks=[6,12,24,16], 
         growth_rate=32
     )
-# if __name__ == "__main__":
-#     x = torch.rand((1,1,100,100))
-#     #print(x)
-#     print(model(x))
+
+if __name__ == "__main__":
+    x = torch.rand((1,1,100,100))
+    print(model(x))
